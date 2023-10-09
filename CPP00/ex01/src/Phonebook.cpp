@@ -39,23 +39,27 @@ void    PhoneBook::addContact()
 {
     std::string input_string;
     std::cout << "input first name" << std::endl;
-    getline(std::cin, input_string);
+    if (!getline(std::cin, input_string))
+        exit(1) ;
     this->database[this->currentIndex % 8].setFirstName(input_string);
 
 
     std::cout << "input last name" << std::endl;
-    getline(std::cin, input_string);
+    if (!getline(std::cin, input_string))
+        exit(1);
     this->database[this->currentIndex % 8].setLastName(input_string);
     
      std::cout << "input nick name" << std::endl;
-    getline(std::cin, input_string);
+    if (!getline(std::cin, input_string))
+        exit(1);
     this->database[this->currentIndex % 8].setNickName(input_string);
 
     std::cout << "input phone number" << std::endl;
 
     while(1)
     {
-        getline(std::cin, input_string);
+        if (!getline(std::cin, input_string))
+            exit(1);
         if (input_string != "" 
             && input_string.length() <= 15
             && input_string.find_first_not_of("0123456789") == std::string::npos)
@@ -68,7 +72,8 @@ void    PhoneBook::addContact()
 
     this->database[this->currentIndex % 8].setPhoneNumber(input_string);
     std::cout << "input dark secret" << std::endl;
-    getline(std::cin, input_string);
+    if(!getline(std::cin, input_string))
+        exit(1);
     this->database[this->currentIndex % 8].setDarkSecret(input_string);
     
     currentIndex += 1;
@@ -111,7 +116,8 @@ void    PhoneBook::showContact() {
     std::string command_input;
 
     std::cout << "please enter index number" << std::endl;
-    getline(std::cin, command_input);
+    if (!getline(std::cin, command_input))
+        exit(1);
     if (command_input.find_first_not_of("01234567") != std::string::npos
         && command_input.length() != 0)
     {

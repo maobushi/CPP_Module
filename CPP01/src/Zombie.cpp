@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobushi <mobushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 21:43:19 by mobushi           #+#    #+#             */
-/*   Updated: 2023/09/26 14:00:58 by mobushi          ###   ########.fr       */
+/*   Created: 2023/10/05 11:55:59 by mobushi           #+#    #+#             */
+/*   Updated: 2023/10/05 12:45:36 by mobushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "../include/Zombie.hpp"
 
-int main(int argc, char ** argv){
+void	Zombie::announce(){
+	std::cout << this->name << ": : BraiiiiiiinnnzzzZ..." << std::endl; 
+}
 
-	if (argc == 1){
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	}
-	else
-	{
-		for (int i = 1; i < argc; i++)
-		{
-			for (int j = 0; argv[i][j] != '\0'; j++)
-			{
-				if ('a' <= argv[i][j] && argv[i][j] <= 'z')
-					std::cout << (char)(argv[i][j] - ('a' - 'A'));
-				else
-					std::cout << argv[i][j];
-			}
-		}
-		std::cout << std::endl;
-	}
-	return 0;
+Zombie *newZombie(std::string name){
+	return (new Zombie(name));	
+}
+
+Zombie::Zombie(std::string name){
+	
 }

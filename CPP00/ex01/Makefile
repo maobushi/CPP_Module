@@ -1,6 +1,6 @@
-CC		= c++ 
+CXX		= c++ 
 
-CFLAGS	= -Wall -Werror -Wextra -std=c++98
+CXXFLAGS	= -Wall -Werror -Wextra -std=c++98
 
 RM		= rm -rf
 
@@ -10,15 +10,17 @@ SRCS	= src/main.cpp \
 
 NAME	= Phonebook
 
-
 all: $(NAME)
 
 $(NAME): $(SRCS)
-	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(SRCS) -o $(NAME)
 
 clean: 
-	$(RM) $(NAME)
+	$(RM) *.o
 
-re: clean all
+fclean: clean
+	$(RM) $(NAME) 
 
-.PHONY: clean  re all
+re: fclean all
+
+.PHONY: clean fclean re all

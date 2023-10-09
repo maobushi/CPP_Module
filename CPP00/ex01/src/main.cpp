@@ -6,7 +6,7 @@
 /*   By: mobushi <mobushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 12:54:55 by mobushi           #+#    #+#             */
-/*   Updated: 2023/10/04 18:08:44 by mobushi          ###   ########.fr       */
+/*   Updated: 2023/10/09 15:49:49 by mobushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int main()
 	std::string command_imput;
 	while (1)
 	{
-	getline(std::cin, command_imput);
+	if (!getline(std::cin, command_imput));
+		break ;
 	if (command_imput == "ADD")
 	{
 		phonebook.addContact();		
