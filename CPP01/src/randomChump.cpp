@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobushi <mobushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 11:55:59 by mobushi           #+#    #+#             */
-/*   Updated: 2023/10/13 13:49:51 by mobushi          ###   ########.fr       */
+/*   Created: 2023/10/13 14:11:39 by mobushi           #+#    #+#             */
+/*   Updated: 2023/10/13 14:12:01 by mobushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "../include/Zombie.hpp"
 
-void	Zombie::announce(){
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl; 
-}
-
-Zombie *newZombie(std::string name){
-	return (new Zombie(name));	
-}
-
-Zombie::Zombie(std::string name){
+void randomChump( std::string name )
+{
 	
 }

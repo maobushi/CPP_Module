@@ -19,7 +19,7 @@ clean:
 	$(RM) *.o
 
 fclean: clean
-	$(RM) $(NAME) 
+	$(RM) $(NAME) *.o
 
 re: fclean all
 

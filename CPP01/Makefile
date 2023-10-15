@@ -19,6 +19,9 @@ $(NAME): $(SRCS)
 clean: 
 	$(RM) $(NAME)
 
+fclean: clean
+	$(RM) $(NAME) *.o
+
 re: clean all
 
 .PHONY: clean  re all

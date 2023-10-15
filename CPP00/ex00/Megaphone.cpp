@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Megaphone.cpp                                      :+:      :+:    :+:   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mobushi <mobushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 21:43:19 by mobushi           #+#    #+#             */
-/*   Updated: 2023/09/26 14:00:58 by mobushi          ###   ########.fr       */
+/*   Updated: 2023/10/11 17:06:31 by mobushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cctype>
+#include <string>
 
 int main(int argc, char ** argv){
 
@@ -24,7 +26,7 @@ int main(int argc, char ** argv){
 			for (int j = 0; argv[i][j] != '\0'; j++)
 			{
 				if ('a' <= argv[i][j] && argv[i][j] <= 'z')
-					std::cout << (char)(argv[i][j] - ('a' - 'A'));
+					std::cout << static_cast<char>(std::toupper(argv[i][j]));
 				else
 					std::cout << argv[i][j];
 			}
