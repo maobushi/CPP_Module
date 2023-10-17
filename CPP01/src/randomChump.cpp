@@ -6,7 +6,7 @@
 /*   By: mobushi <mobushi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 14:11:39 by mobushi           #+#    #+#             */
-/*   Updated: 2023/10/13 14:12:01 by mobushi          ###   ########.fr       */
+/*   Updated: 2023/10/17 09:01:31 by mobushi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void randomChump( std::string name )
 {
-	
+	Zombie *newZombie = new Zombie(name);
+	newZombie->announce();
+
 }

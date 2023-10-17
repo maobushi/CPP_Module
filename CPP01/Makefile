@@ -5,10 +5,11 @@ CFLAGS	= -Wall -Werror -Wextra -std=c++98
 RM		= rm -rf
 
 SRCS	= src/main.cpp \
-			src/Phonebook.cpp \
-			src/Contact.cpp
+			src/newZombie.cpp \
+			src/randomChump.cpp \
+			src/Zombie.cpp
 
-NAME	= Phonebook
+NAME	= zombie
 
 
 all: $(NAME)
